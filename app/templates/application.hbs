@@ -1,5 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<header class="container">
+  <h1><a href='/'>WeCode</a></h1>
+</header>
+<main class="container">
+  {{outlet}}
+</main>
+<footer class="container">
+  <h1><a href="/">WeCode</a></h1>
+  <ul>
+    <li><h2>Author: <a href='https://github.com/bitgrind/weCode' target='_blank'>@Bitgrind</a></h2></li>
+    <li><h2><a href='https://www.epicodus.com/' target='_blank'>Platform</a></h2></li>
+  </ul>
+</footer>
