@@ -2,5 +2,8 @@
 
 a {color:#333;text-decoration: none;}
 a:visited {color:#333;text-decoration: none;}
-a:hover {text-decoration: none;}
+a:hover {text-decoration: none;color:#0af;}
 ul, li {list-style: none;padding:0;margin:0;}
+
+.wecode-logo {position: relative;top:-10px;}
+.wecode-logo .fa-code {position: absolute;left:8.5px;top:13px;font-size:.5em;}
