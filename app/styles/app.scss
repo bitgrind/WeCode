@@ -1,18 +1,36 @@
 @import "ember-bootstrap/bootstrap";
 
+@mixin clear {
+  &:before, &:after {content:"";width:100%;display:block;clear:both;}
+}
+
+@mixin hover {
+  &:hover {background-color:rgba(0,170,255,.3);border:1px solid #4C90B2;}
+}
+
 a {color:#333;text-decoration: none;}
 a:visited {color:#333;text-decoration: none;}
 a:hover {text-decoration: none;color:#0af;}
 ul, li {list-style: none;padding:0;margin:0;}
 
-.nav-links {display:inline-block;width:10%;text-align: center;}
+header {}
+main {padding-top:50px;min-height:500px;}
+footer {background-color: #0af;margin-top:50px;}
+footer a:hover {color:#fff;}
+
+.nav-links {float:left;width:10%;text-align: center;margin-left:10px;}
+.nav-links:first-of-type {margin-left:0px;}
 .nav-links a {padding:20% 0;display:block;border:1px solid #333;border-radius: 3px;}
-.nav-links a:hover {background-color:rgba(0,170,255,.3);border:1px solid #4C90B2;}
+.nav-links a:hover {@include hover;}
 
 .wecode-logo {position: relative;top:-10px;}
 .wecode-logo .fa-code {position: absolute;left:8.5px;top:13px;font-size:.5em;}
 
+#question-list {@include clear;}
+.questions {@include clear;border-top:1px solid #ddd;padding:2% 1%}
 .question-author {display:block;}
 
-#add-qustion {position: relative;width:100px;height:100px;border-radius: 10px;border:1px solid #333;background-color:#fff;}
-#add-qustion i {position: absolute;left:0;right:0;top:0;bottom:0;margin:auto;font-size:50px;height:50px;width:50px;}
+#add-qustion button {position: relative;width:100px;height:100px;border-radius: 10px;border:1px solid #333;background-color:#fff;}
+#add-qustion button:after {content:"Ask Question";top:0;position: absolute;left:0;right:0;}
+#add-qustion button:hover {@include hover;}
+#add-qustion button i {position: absolute;left:0;right:0;top:0;bottom:0;margin:auto;font-size:50px;height:50px;width:50px;}

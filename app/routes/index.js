@@ -4,7 +4,6 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       question: this.store.findAll('question')
-      link: this.store.findAll('link')
     });
   },
   actions: {
@@ -14,7 +13,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     saveLink(params) {
-      var newLink = this.store.createRecord('link', params);
+      var newLink = this.store.createRecord('nav-links', params);
       newLink.save();
       this.transitionTo('index');
     },
