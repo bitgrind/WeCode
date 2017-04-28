@@ -5,6 +5,10 @@ a:visited {color:#333;text-decoration: none;}
 a:hover {text-decoration: none;color:#0af;}
 ul, li {list-style: none;padding:0;margin:0;}
 
+.nav-links {display:inline-block;width:10%;text-align: center;}
+.nav-links a {padding:20% 0;display:block;border:1px solid #333;border-radius: 3px;}
+.nav-links a:hover {background-color:rgba(0,170,255,.3);border:1px solid #4C90B2;}
+
 .wecode-logo {position: relative;top:-10px;}
 .wecode-logo .fa-code {position: absolute;left:8.5px;top:13px;font-size:.5em;}
 

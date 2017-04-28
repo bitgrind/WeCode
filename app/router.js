@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('html');
+  this.route('css');
+  this.route('js');
+  this.route('java');
+  this.route('php');
 });
 
 export default Router;

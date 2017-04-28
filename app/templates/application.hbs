@@ -1,5 +1,22 @@
 <header class="container">
   <h1><a href='/'>WeCode<span class="wecode-logo"><i class="fa fa-comment-o" aria-hidden="true"><i class="fa fa-code" aria-hidden="true"></i></i></span></a></h1>
+  <nav>
+    <div class="nav-links">
+      {{#link-to 'html'}}html{{/link-to}}
+    </div>
+    <div class="nav-links">
+      {{#link-to 'css'}}css{{/link-to}}
+    </div>
+    <div class="nav-links">
+      {{#link-to 'js'}}js{{/link-to}}
+    </div>
+    <div class="nav-links">
+      {{#link-to 'java'}}java{{/link-to}}
+    </div>
+    <div class="nav-links">
+      {{#link-to 'php'}}php{{/link-to}}
+    </div>
+  </nav>
 </header>
 <main class="container">
   {{outlet}}
