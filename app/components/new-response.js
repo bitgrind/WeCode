@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewReview: false,
+  addNewResponse: false,
   actions: {
     responseFormShow() {
-      this.set('addNewReview', true);
+      this.set('addNewResponse', true);
     },
     saveResponse() {
       var params = {
@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         response: this.get('response'),
         question: this.get('question')
       };
-      this.set('addNewReview', false)
+      this.set('addNewResponse', false)
       this.sendAction('saveResponse', params);
     }
   }

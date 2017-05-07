@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
-      question: this.store.findAll('question')
+      question: this.store.findAll('question'),
+      response: this.store.findAll('response')
     });
   },
   actions: {
@@ -17,13 +18,14 @@ export default Ember.Route.extend({
       newLink.save();
       this.transitionTo('index');
     },
-    saveResponse(params) {
-      var newResponse = this.store.createRecord('response', params);
-      var question = params.quesiton;
-      newResponse.save().then(function(){
-        return question.save();
+    update(question, params){
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+            question.set(key, params[key]);
+        }
       });
-      this.transitionTo('question', question);
+      question.save();
+      this.transitionTo('index');
     }
   }
 });

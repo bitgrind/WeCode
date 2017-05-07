@@ -1,8 +1,7 @@
 <h1>Question Detail</h1>
 
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
 
 {{update-question question=model update="update"}}
 
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
-
-{{new-response saveResponse="saveResponse" response=model}}
+{{new-response saveResponse="saveResponse" question=model}}

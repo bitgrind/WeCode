@@ -27,7 +27,7 @@ footer a:hover {color:#fff;}
 .wecode-logo .fa-code {position: absolute;left:8.5px;top:13px;font-size:.5em;}
 
 #question-list {@include clear;}
-.questions {@include clear;border-top:1px solid #ddd;padding:2% 1%}
+.questions {@include clear;border-top:1px solid #ddd;padding:2% 1%;min-height:100px;}
 .questions a {display:block;width:100%;height:100%;position: absolute;}
 .question-author {display:block;}
 
