@@ -1,1 +1,10 @@
-{{yield}}
+<h1>Author: {{question.author}}</h1>
+<h2>{{question.question}}</h2>
+
+<!-- <ul>
+  {{#each question.response as |response|}}
+    {{resonse-tile response=response}}
+  {{/each}}
+</ul> -->
+
+<button {{action 'delete' response}}>Delete</button>

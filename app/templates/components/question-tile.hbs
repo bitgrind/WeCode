@@ -1,5 +1,6 @@
 <li class="{{question.category}} col-md-6">
-  <a></a>
-  <span class='question-author'>Author: {{question.author}}</span>
-  <span class='question-question'>Question:{{question.question}}</span>
+  {{#link-to 'question' question.id}}
+    <span class='question-author'>Author: {{question.author}}</span>
+    <span class='question-question'>Question:{{question.question}}</span>
+  {{/link-to}}
 </li>

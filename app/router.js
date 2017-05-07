@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('js');
   this.route('java');
   this.route('php');
+  this.route('question', {path: '/question/:question_id'});
 });
 
 export default Router;
